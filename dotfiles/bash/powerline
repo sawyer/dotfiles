@@ -1,0 +1,5 @@
+#!/bin/bash
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. $(python -c "import powerline; import os; print os.path.dirname(powerline.__file__)")/bindings/bash/powerline.sh
