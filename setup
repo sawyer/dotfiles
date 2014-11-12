@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function ubuntu() {
+  sudo apt-get -y install build-essential git ruby gem python-pip
+  sudo gem install rake
+  sudo pip install dotfiles
+}
+
+function install() {
+  rake dotfiles
+}
+
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+case `uname` in
+  'Darwin')
+    osx
+    ;;
+  'Linux')
+    ubuntu
+    ;;
+esac
+
+install
