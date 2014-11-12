@@ -36,6 +36,13 @@ set shiftwidth=2
 set softtabstop=2
 
 " =============================================================================
+"                                                                        Window
+" =============================================================================
+
+set equalalways
+set splitbelow splitright
+
+" =============================================================================
 "                                                                        Vundle
 " =============================================================================
 
@@ -45,16 +52,30 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
 
-so ~/.vim/init.vim
+so ~/.vim/plugin-init.vim
+
+" =============================================================================
+"                                                                      Function
+" =============================================================================
+
+function! StripWhitespace()
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
+endfunction
 
 " =============================================================================
 "                                                                         Remap
 " =============================================================================
 
 cnoremap $$ <C-R>=expand('%:h').'/'<cr>
+noremap <leader>ss :call StripWhitespace()<CR>
