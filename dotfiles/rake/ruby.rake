@@ -10,5 +10,7 @@ namespace :ruby do
     sh "apt-get -y install linux-headers-$(uname -r)"
     sh "dpkg-reconfigure virtualbox-dkms"
     sh "hash -d vagrant"
+
+    sh "vagrant plugin install vagrant-hostmanager vagrant-vbguest"
   end
 end

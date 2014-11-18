@@ -4,6 +4,6 @@ namespace :dotfiles do
   end
 
   task :update do
-    sh "dotfiles -sMf -R ~/tribone/software/dotfiles/dotfiles"
+    sh "dotfiles -sMf -R ~/software/tribone/dotfiles/dotfiles"
   end
 end

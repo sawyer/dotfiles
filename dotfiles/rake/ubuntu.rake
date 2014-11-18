@@ -7,9 +7,13 @@ namespace :ubuntu do
     sh "apt-get -y install build-essential"
     sh "curl https://bootstrap.pypa.io/get-pip.py | sudo python -"
 
-    sh "mkdir ~/software"
-    sh "mkdir ~/tribone/software"
-    sh "mv ~/dotfiles ~/tribone/software/dotfiles"
+    sh "mkdir -p ~/software/tribone"
+    sh "mv ~/dotfiles ~/software/tribone/dotfiles"
+  end
+
+  task :nfs do
+    sh "apt-get -y install nfs-kernel-server nfs-common"
+    sh "sudo exportfs -a && sudo service nfs-kernel-server start"
   end
 
   task application: %w[application:terminator application:spotify

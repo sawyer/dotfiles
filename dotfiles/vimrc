@@ -17,6 +17,8 @@ set background=light
 "                                                                        Format
 " =============================================================================
 
+set encoding=utf-8
+
 set number
 set wrap
 
@@ -52,6 +54,8 @@ set wildmode=full
 set list
 set listchars=tab:⇥·,trail:·
 match Error /\v\s+$/
+
+set laststatus=2
 
 
 " =============================================================================
@@ -97,3 +101,4 @@ noremap <leader>ss :call StripWhitespace()<CR>
 
 map <leader>db A<CR>import ipdb; ipdb.set_trace()<ESC>
 map <leader>ry A<CR>require "pry"; binding.pry<ESC>
+" TODO: single quote to double quote

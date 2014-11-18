@@ -1,1 +1,17 @@
-/home/tribone/dotfiles/dotfiles/config/terminator/config
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = Monaco for Powerline 10
+    background_image = None
+    foreground_color = "#ffffff"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
