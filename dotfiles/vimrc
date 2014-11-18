@@ -46,6 +46,13 @@ set softtabstop=2
 set equalalways
 set splitbelow splitright
 
+set wildmenu
+set wildmode=full
+
+set list
+set listchars=tab:⇥·,trail:·
+match Error /\v\s+$/
+
 
 " =============================================================================
 "                                                                        Vundle
@@ -87,3 +94,6 @@ endfunction
 
 cnoremap $$ <C-R>=expand('%:h').'/'<cr>
 noremap <leader>ss :call StripWhitespace()<CR>
+
+map <leader>db A<CR>import ipdb; ipdb.set_trace()<ESC>
+map <leader>ry A<CR>require "pry"; binding.pry<ESC>

@@ -1,10 +1,8 @@
 #!/bin/bash
-
 function ubuntu() {
-  sudo apt-get -y install build-essential git ruby gem
-  curl https://bootstrap.pypa.io/get-pip.py | sudo python -
+  sudo apt-get -y install git ruby gem
+
   sudo gem install rake
-  sudo pip install dotfiles
 }
 
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -12,7 +10,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 case `uname` in
   'Linux')
     ubuntu
+    sudo rake ubuntu
     ;;
 esac
-
-rake
