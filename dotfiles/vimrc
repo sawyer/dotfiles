@@ -88,7 +88,7 @@ endfunction
 cnoremap $$ <C-R>=expand('%:h').'/'<cr>
 
 noremap <leader>ss :call StripWhitespace()<CR>
-" TODO: single quote to double quote
+noremap <leader>" :%s/'/"/g<CR>
 
 map <leader>db A<CR>import ipdb; ipdb.set_trace()<ESC>
 map <leader>ry A<CR>require "pry"; binding.pry<ESC>
