@@ -1,12 +1,12 @@
-let settings = '~/.vim/settings'
+let plugins = '~/.vim/vundle'
 
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-for path in split(globpath(settings, '*.vim'), '\n')
-  exe 'source' path
+for plugin in split(globpath(plugins, '*.vim'), '\n')
+  exe 'source' plugin
 endfor
 
 call vundle#end()
