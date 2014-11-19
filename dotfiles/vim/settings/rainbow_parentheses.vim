@@ -1,3 +1,5 @@
+Plugin 'kien/rainbow_parentheses.vim'
+
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare

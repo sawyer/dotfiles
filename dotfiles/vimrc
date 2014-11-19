@@ -9,6 +9,7 @@ endif
 "                                                                         Color
 " =============================================================================
 
+syntax on
 colorscheme molokai
 set background=light
 
@@ -62,21 +63,7 @@ set laststatus=2
 "                                                                        Vundle
 " =============================================================================
 
-
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'tpope/vim-fugitive'
-
-call vundle#end()
-filetype plugin indent on
-
-so ~/.vim/plugin-init.vim
+so ~/.vim/vundle-init.vim
 
 
 " =============================================================================
@@ -97,8 +84,12 @@ endfunction
 " =============================================================================
 
 cnoremap $$ <C-R>=expand('%:h').'/'<cr>
+
 noremap <leader>ss :call StripWhitespace()<CR>
+" TODO: single quote to double quote
 
 map <leader>db A<CR>import ipdb; ipdb.set_trace()<ESC>
 map <leader>ry A<CR>require "pry"; binding.pry<ESC>
-" TODO: single quote to double quote
+
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
