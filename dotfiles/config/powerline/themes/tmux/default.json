@@ -11,6 +11,10 @@
   "segments": {
     "right": [
       {
+        "function": "powerline.segments.common.players.spotify",
+        "name": "player"
+      },
+      {
         "function": "system_load",
         "priority": 50
       },
