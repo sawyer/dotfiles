@@ -1,5 +1,5 @@
 #!/bin/bash
-alias ls="ls -altr"
+alias ls="ls --color -altr"
 alias tmux="tmux -2"
 alias spip="sudo pip"
 alias pbcopy="xclip -selection clipboard"
