@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Opens a SSH connection to the Vagrant VM using a control connection.
+# Open a SSH connection to Vagrant.
 function vssh() {
-  local control_path="/home/tribone/.vagrant_ssh_control"
+  local control_path="$HOME/.vagrant_ssh_control"
 
   if [[ ! -S $control_path ]]
   then
