@@ -1,0 +1,3 @@
+#!/bin/bash
+export EDITOR=/usr/local/bin/vim
+export GIT_EDITOR=/usr/local/bin/vim
