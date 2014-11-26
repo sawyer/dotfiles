@@ -5,7 +5,8 @@ alias spip="sudo pip"
 alias tmux="tmux -2"
 alias vconsole='vssh -t "cd /vagrant/easy_post/ && bundle exec foreman run rails c"'
 alias vspec='vssh -t "cd /vagrant/easy_post/ && bundle exec foreman run rspec --color"'
-alias vdb='vssh -t "cd /vagrant/easy_post/ && bundle exec foreman run rake db:drop db:create db:migrate db:logs:migrate db:schema:dump db:test:prepare"'
+alias vdb='vssh -t "cd /vagrant/easy_post/ && bundle exec foreman run rake db:drop ' \
+          'db:create db:migrate db:logs:migrate db:schema:dump db:test:prepare"'
 
 case `uname` in
   'Linux')
