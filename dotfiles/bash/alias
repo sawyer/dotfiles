@@ -3,8 +3,8 @@ alias reload_tmux_conf="tmux source-file ~/.tmux.conf"
 alias so="source ~/.bashrc"
 alias spip="sudo pip"
 alias tmux="tmux -2"
-alias vconsole="vssh -t cd /vagrant/easy_post/ \&\& bundle exec foreman run rails c"
-alias vspec="vssh -t cd /vagrant/easy_post/ \&\& bundle exec foreman run rspec --color"
+alias vconsole='vssh -t "cd /vagrant/easy_post/ \&\& bundle exec foreman run rails c"'
+alias vspec='vssh -t "cd /vagrant/easy_post/ && bundle exec foreman run rspec --color"'
 
 case `uname` in
   'Linux')
