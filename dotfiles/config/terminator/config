@@ -5,6 +5,7 @@
     use_system_font = False
     font = Monaco for Powerline 10
     background_image = None
+    login_shell = True
     foreground_color = "#ffffff"
 [layouts]
   [[default]]
