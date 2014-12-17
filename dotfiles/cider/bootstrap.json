@@ -1,0 +1,11 @@
+{
+  "casks": [
+    "alfred",
+    "iterm2",
+    "spotify",
+    "google-chrome"
+  ],
+  "formulas": [
+    "python3"
+  ]
+}

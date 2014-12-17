@@ -5,9 +5,32 @@ function ubuntu() {
   sudo gem install rake
 }
 
+function osx() {
+  # get repo location
+
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install caskroom/cask/brew-cask
+  brew update
+
+  sudo easy_install pip
+  sudo pip install dotfiles
+  dotfiles -sf -R ~/dotfiles/dotfiles
+
+  sudo pip install git+git://github.com/Lokaltog/powerline
+  ln -s ~/dotfiles/dotfiles/local/share/fonts/Monaco-Powerline.otf ~/Library/Fonts/Monaco-Powerline.otf
+
+  sudo pip install cider
+  cider restore
+  # git submodule update --init
+}
+
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 case `uname` in
+  'Darwin')
+    osx
+    sudo rake osx
+    ;;
   'Linux')
     ubuntu
     sudo rake ubuntu
