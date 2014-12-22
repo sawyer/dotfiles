@@ -1,6 +1,7 @@
 {
   "casks": [
     "alfred",
+    "icdiff",
     "iterm2",
     "spotify",
     "google-chrome"
