@@ -104,8 +104,9 @@ cnoremap $$ <C-R>=expand('%:h').'/'<cr>
 noremap <leader>ss :call StripWhitespace()<CR>
 noremap <leader>" :%s/'/"/g<CR>
 
-map <leader>db A<CR>import ipdb; ipdb.set_trace()<ESC>
-map <leader>ry A<CR>require "pry"; binding.pry<ESC>
+map <leader>db oimport ipdb; ipdb.set_trace()<ESC>
+map <leader>ry orequire "pry"; binding.pry<ESC>
 
+" What do these do?
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
