@@ -25,7 +25,7 @@
       {
         "function": "date",
         "args": {
-          "format": "%H:%M",
+          "format": "%H:%M %s",
           "istime": true
         }
       },
