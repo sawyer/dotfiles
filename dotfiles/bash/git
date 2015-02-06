@@ -1,6 +1,6 @@
 #!/bin/bash
-source /etc/bash_completion.d/git-prompt
-# source /usr/local/git/contrib/completion/git-completion.bash
+maybe_source /etc/bash_completion.d/git-prompt
+maybe_source /usr/local/git/contrib/completion/git-completion.bash
 
 function gitlist() {
   for k in `git branch | sed s/^..//`
